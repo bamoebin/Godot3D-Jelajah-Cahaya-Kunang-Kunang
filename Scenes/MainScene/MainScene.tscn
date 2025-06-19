@@ -1,0 +1,371 @@
+[gd_scene load_steps=76 format=3 uid="uid://gm1rrjc4yf1b"]
+
+[ext_resource type="PackedScene" uid="uid://dbp6lnwa6iw45" path="res://Assets/Character/bocahJawa.tscn" id="1_ekeiw"]
+[ext_resource type="Script" path="res://addons/terrabrush/TerraBrush.cs" id="2_mkqqx"]
+[ext_resource type="Texture2D" uid="uid://csjbudgioubg2" path="res://Assets/Textures/brown_mud_leaves_01_1k.gltf/textures/brown_mud_leaves_01_diff_1k.jpg" id="3_bhije"]
+[ext_resource type="Texture2D" uid="uid://cxw4b62b85gxv" path="res://Assets/Textures/brown_mud_leaves_01_1k.gltf/textures/brown_mud_leaves_01_nor_gl_1k.jpg" id="4_31213"]
+[ext_resource type="Texture2D" uid="uid://bu7asx3ma4ff" path="res://Assets/Textures/brown_mud_leaves_01_1k.gltf/textures/brown_mud_leaves_01_arm_1k.jpg" id="5_1dkr7"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/TextureSetResource.cs" id="6_qkk5p"]
+[ext_resource type="Texture2D" uid="uid://4nrgveg6w5xb" path="res://Assets/Textures/brown_mud_03_1k.gltf/textures/brown_mud_03_diff_1k.jpg" id="7_j7ae8"]
+[ext_resource type="Texture2D" uid="uid://bgi813npp7hlw" path="res://Assets/Textures/brown_mud_03_1k.gltf/textures/brown_mud_03_nor_gl_1k.jpg" id="8_ckhsw"]
+[ext_resource type="Texture2D" uid="uid://sgdvqv2gtc6h" path="res://Assets/Textures/brown_mud_03_1k.gltf/textures/brown_mud_03_spec_1k.jpg" id="9_ty0c1"]
+[ext_resource type="Texture2D" uid="uid://havf7lbv5myl" path="res://Assets/Textures/brick_moss_001_1k.gltf/textures/brick_moss_001_diff_1k.jpg" id="10_dv3nf"]
+[ext_resource type="Texture2D" uid="uid://b1qvaegto4sn1" path="res://Assets/Textures/brick_moss_001_1k.gltf/textures/brick_moss_001_nor_gl_1k.jpg" id="11_lq7n5"]
+[ext_resource type="Texture2D" uid="uid://dnive12m28uop" path="res://Assets/Textures/brick_moss_001_1k.gltf/textures/brick_moss_001_rough_1k.jpg" id="12_8f5jc"]
+[ext_resource type="Texture2D" uid="uid://bf6cpkxtcr3ey" path="res://Assets/Textures/forest_leaves_04_1k.gltf/textures/forest_leaves_04_diff_1k.jpg" id="13_qt71p"]
+[ext_resource type="Texture2D" uid="uid://bupynfiiwvicv" path="res://Assets/Textures/forest_leaves_04_1k.gltf/textures/forest_leaves_04_nor_gl_1k.jpg" id="14_m8hlk"]
+[ext_resource type="Texture2D" uid="uid://c0vibg50uua0v" path="res://Assets/Textures/forest_leaves_04_1k.gltf/textures/forest_leaves_04_arm_1k.jpg" id="15_xsa40"]
+[ext_resource type="Texture2D" uid="uid://bct634nogp1l0" path="res://Assets/Textures/gravel_road_1k.gltf/textures/gravel_road_diff_1k.jpg" id="16_37sbp"]
+[ext_resource type="Texture2D" uid="uid://j6t53nhflrxn" path="res://Assets/Textures/gravel_road_1k.gltf/textures/gravel_road_nor_gl_1k.jpg" id="17_6qixq"]
+[ext_resource type="Texture2D" uid="uid://d0f7lvty5lich" path="res://Assets/Textures/gravel_road_1k.gltf/textures/gravel_road_arm_1k.jpg" id="18_dq3q5"]
+[ext_resource type="Texture2D" uid="uid://qm5r30fdnpv4" path="res://Assets/Textures/coast_sand_02_1k.gltf/textures/coast_sand_02_diff_1k.jpg" id="19_7v44k"]
+[ext_resource type="Texture2D" uid="uid://xkmxkwi78ojn" path="res://Assets/Textures/coast_sand_02_1k.gltf/textures/coast_sand_02_nor_gl_1k.jpg" id="20_a0hx7"]
+[ext_resource type="Texture2D" uid="uid://c08jytwhn3xdl" path="res://Assets/Textures/coast_sand_02_1k.gltf/textures/coast_sand_02_arm_1k.jpg" id="21_bxkq3"]
+[ext_resource type="Texture2D" uid="uid://bhtptrgtf2e1k" path="res://Assets/Textures/lichen_rock_1k.gltf/textures/lichen_rock_diff_1k.jpg" id="22_yj8vn"]
+[ext_resource type="Texture2D" uid="uid://361k37djh1s4" path="res://Assets/Textures/lichen_rock_1k.gltf/textures/lichen_rock_nor_gl_1k.jpg" id="23_xet4t"]
+[ext_resource type="Texture2D" uid="uid://b23t1yp02q5nw" path="res://Assets/Textures/lichen_rock_1k.gltf/textures/lichen_rock_arm_1k.jpg" id="24_31eyu"]
+[ext_resource type="Texture2D" uid="uid://cuc4acornot4l" path="res://Assets/Textures/rock_wall_02_1k.gltf/textures/rock_wall_02_diff_1k.jpg" id="25_tawos"]
+[ext_resource type="Texture2D" uid="uid://djj1ej2crv8q8" path="res://Assets/Textures/rock_wall_02_1k.gltf/textures/rock_wall_02_nor_gl_1k.jpg" id="26_2fp8u"]
+[ext_resource type="Texture2D" uid="uid://cdyibpvwmdpgy" path="res://Assets/Textures/rock_wall_02_1k.gltf/textures/rock_wall_02_rough_1k.jpg" id="27_tm8e0"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/TextureSetsResource.cs" id="28_eklmr"]
+[ext_resource type="Texture2D" uid="uid://b8ggyg4ax3816" path="res://Assets/Foliages/sprite_0054.png" id="29_jo5md"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/FoliageDefinitionResource.cs" id="30_lalmn"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/FoliageResource.cs" id="31_2yq0r"]
+[ext_resource type="Texture2D" uid="uid://d1bc7kb5a71c4" path="res://Assets/Foliages/sprite_0072.png" id="32_ckvek"]
+[ext_resource type="PackedScene" uid="uid://bvtdod512r3oh" path="res://Assets/Obj/pohon_common.glb" id="33_2qlp1"]
+[ext_resource type="PackedScene" uid="uid://bq3kw5glkco3u" path="res://Assets/Obj/pohon_pisang.glb" id="34_uu5g8"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/ObjectDefinitionResource.cs" id="35_1xrwk"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/ObjectResource.cs" id="36_ch2f4"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/WaterResource.cs" id="37_5p16f"]
+[ext_resource type="Texture2D" uid="uid://depp63pscupq1" path="res://Scenes/MainScene/Foliage_0_0_0.res" id="38_unto0"]
+[ext_resource type="Texture2D" uid="uid://bixujqgdrrqeq" path="res://Scenes/MainScene/Foliage_0_0_1.res" id="39_2txra"]
+[ext_resource type="Texture2D" uid="uid://y50o3moqdtft" path="res://Scenes/MainScene/Heightmap_0_0.res" id="40_3g8o2"]
+[ext_resource type="Texture2D" uid="uid://caft11bpke18n" path="res://Scenes/MainScene/Object_0_0_0.res" id="41_5o11h"]
+[ext_resource type="Texture2D" uid="uid://b2txdlcyv78tw" path="res://Scenes/MainScene/Splatmap_0_0_0.res" id="42_one7b"]
+[ext_resource type="Texture2D" uid="uid://cd8n33q3m5vkl" path="res://Scenes/MainScene/Splatmap_0_0_1.res" id="43_dcum1"]
+[ext_resource type="Texture2D" uid="uid://pro2mxq23h0v" path="res://Scenes/MainScene/Water_0_0.res" id="44_ytcwy"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/ZoneResource.cs" id="45_lh8qw"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/ZonesResource.cs" id="46_332jo"]
+[ext_resource type="PackedScene" uid="uid://fjeirc7fpybj" path="res://Assets/Obj/KunangSpawner.tscn" id="47_ly17q"]
+[ext_resource type="PackedScene" uid="uid://brn8edjxrhn3a" path="res://Assets/Character/BarongSpawner.tscn" id="48_kd2s0"]
+[ext_resource type="PackedScene" uid="uid://cnpovomjrk61h" path="res://Assets/Obj/rumah/joglo.tscn" id="49_r5xo4"]
+[ext_resource type="PackedScene" uid="uid://b27d84q2t6whu" path="res://Assets/Obj/rumah/VictoryArea.tscn" id="50_a4pxe"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s8fvk"]
+sky_top_color = Color(0.0392157, 0.0392157, 0.101961, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_vqpib"]
+sky_material = SubResource("ProceduralSkyMaterial_s8fvk")
+
+[sub_resource type="Environment" id="Environment_jf11k"]
+background_mode = 2
+background_color = Color(0.0392157, 0.0392157, 0.101961, 1)
+sky = SubResource("Sky_vqpib")
+ambient_light_source = 2
+ambient_light_color = Color(0.101961, 0.101961, 0.227451, 1)
+ambient_light_energy = 0.1
+fog_light_color = Color(0.00296895, 0.00296306, 0.00888569, 1)
+fog_aerial_perspective = 0.5
+fog_sky_affect = 0.7
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.31802, 0.31802, 0.31802, 1)
+volumetric_fog_emission = Color(0.0127817, 0.0127765, 0.0287698, 1)
+
+[sub_resource type="Resource" id="Resource_rq1u2"]
+script = ExtResource("6_qkk5p")
+Name = "Grass and Mud"
+AlbedoTexture = ExtResource("3_bhije")
+NormalTexture = ExtResource("4_31213")
+RoughnessTexture = ExtResource("5_1dkr7")
+TextureDetail = -1
+Triplanar = false
+
+[sub_resource type="Resource" id="Resource_18oyj"]
+script = ExtResource("6_qkk5p")
+Name = "Mud"
+AlbedoTexture = ExtResource("7_j7ae8")
+NormalTexture = ExtResource("8_ckhsw")
+RoughnessTexture = ExtResource("9_ty0c1")
+TextureDetail = -1
+Triplanar = false
+
+[sub_resource type="Resource" id="Resource_jfoki"]
+script = ExtResource("6_qkk5p")
+Name = "Brick"
+AlbedoTexture = ExtResource("10_dv3nf")
+NormalTexture = ExtResource("11_lq7n5")
+RoughnessTexture = ExtResource("12_8f5jc")
+TextureDetail = -1
+Triplanar = false
+
+[sub_resource type="Resource" id="Resource_0xj2u"]
+script = ExtResource("6_qkk5p")
+Name = "Forest Leaves"
+AlbedoTexture = ExtResource("13_qt71p")
+NormalTexture = ExtResource("14_m8hlk")
+RoughnessTexture = ExtResource("15_xsa40")
+TextureDetail = -1
+Triplanar = false
+
+[sub_resource type="Resource" id="Resource_ri6xm"]
+script = ExtResource("6_qkk5p")
+Name = "Gravel Road"
+AlbedoTexture = ExtResource("16_37sbp")
+NormalTexture = ExtResource("17_6qixq")
+RoughnessTexture = ExtResource("18_dq3q5")
+TextureDetail = -1
+Triplanar = false
+
+[sub_resource type="Resource" id="Resource_60tqe"]
+script = ExtResource("6_qkk5p")
+Name = "Sand"
+AlbedoTexture = ExtResource("19_7v44k")
+NormalTexture = ExtResource("20_a0hx7")
+RoughnessTexture = ExtResource("21_bxkq3")
+TextureDetail = -1
+Triplanar = false
+
+[sub_resource type="Resource" id="Resource_fi7la"]
+script = ExtResource("6_qkk5p")
+Name = "rock lichen"
+AlbedoTexture = ExtResource("22_yj8vn")
+NormalTexture = ExtResource("23_xet4t")
+RoughnessTexture = ExtResource("24_31eyu")
+TextureDetail = -1
+Triplanar = false
+
+[sub_resource type="Resource" id="Resource_mcfc6"]
+script = ExtResource("6_qkk5p")
+Name = "rock wall"
+AlbedoTexture = ExtResource("25_tawos")
+NormalTexture = ExtResource("26_2fp8u")
+RoughnessTexture = ExtResource("27_tm8e0")
+TextureDetail = -1
+Triplanar = false
+
+[sub_resource type="Resource" id="Resource_a1dvv"]
+script = ExtResource("28_eklmr")
+TextureSets = [SubResource("Resource_rq1u2"), SubResource("Resource_18oyj"), SubResource("Resource_jfoki"), SubResource("Resource_0xj2u"), SubResource("Resource_ri6xm"), SubResource("Resource_60tqe"), SubResource("Resource_fi7la"), SubResource("Resource_mcfc6")]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bpha5"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.419608, 0.74902, 0.34902, 1)
+albedo_texture = ExtResource("29_jo5md")
+
+[sub_resource type="QuadMesh" id="QuadMesh_01u15"]
+material = SubResource("StandardMaterial3D_bpha5")
+center_offset = Vector3(0, 0.5, 0)
+
+[sub_resource type="Resource" id="Resource_j11j3"]
+script = ExtResource("30_lalmn")
+Strategy = 2
+Mesh = SubResource("QuadMesh_01u15")
+MeshScale = Vector3(1, 1, 1)
+WindStrength = 0.1
+VisualInstanceLayers = 1
+LODLevels = 3
+LODRowsPerLevel = 50
+LODInitialCellWidth = 1.0
+Albedo = Color(1, 1, 1, 1)
+AlbedoTextures = []
+NearestTextureFilter = false
+UseGroundColor = false
+CastShadow = false
+UseBrushScale = true
+RandomPlacementRange = 3.0
+ApplyOnTextureIndexes = PackedInt32Array()
+MaximumRenderDistance = 50
+EditorMaximumRenderDistance = 60
+
+[sub_resource type="Resource" id="Resource_iq232"]
+script = ExtResource("31_2yq0r")
+Definition = SubResource("Resource_j11j3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rkr13"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.662745, 0.776471, 0.309804, 1)
+albedo_texture = ExtResource("32_ckvek")
+
+[sub_resource type="QuadMesh" id="QuadMesh_e10po"]
+material = SubResource("StandardMaterial3D_rkr13")
+center_offset = Vector3(0, 0.5, 0)
+
+[sub_resource type="Resource" id="Resource_86j2v"]
+script = ExtResource("30_lalmn")
+Strategy = 2
+Mesh = SubResource("QuadMesh_e10po")
+MeshScale = Vector3(1, 1, 1)
+WindStrength = 0.1
+VisualInstanceLayers = 1
+LODLevels = 3
+LODRowsPerLevel = 50
+LODInitialCellWidth = 1.0
+Albedo = Color(1, 1, 1, 1)
+AlbedoTextures = []
+NearestTextureFilter = false
+UseGroundColor = false
+CastShadow = false
+UseBrushScale = true
+RandomPlacementRange = 3.0
+ApplyOnTextureIndexes = PackedInt32Array()
+MaximumRenderDistance = 50
+EditorMaximumRenderDistance = 50
+
+[sub_resource type="Resource" id="Resource_6765c"]
+script = ExtResource("31_2yq0r")
+Definition = SubResource("Resource_86j2v")
+
+[sub_resource type="Resource" id="Resource_75gk0"]
+script = ExtResource("35_1xrwk")
+Strategy = 1
+ObjectFrequency = -1
+RandomRange = 10.0
+RandomYRotation = true
+RandomSize = false
+RandomSizeFactorMin = 0.2
+RandomSizeFactorMax = 1.2
+ObjectScenes = [ExtResource("33_2qlp1"), ExtResource("34_uu5g8")]
+LODList = []
+LODMeshes = []
+UpdateDistanceThreshold = 1.0
+UpdateTimeFrequency = 0.1
+VisualInstanceLayers = 1
+
+[sub_resource type="Resource" id="Resource_xsg1h"]
+script = ExtResource("36_ch2f4")
+Definition = SubResource("Resource_75gk0")
+Hide = false
+
+[sub_resource type="Resource" id="Resource_uli4l"]
+script = ExtResource("37_5p16f")
+WaterFactor = 1.0
+WaterInnerOffset = 0.2
+WaterColor = Color(1, 1, 1, 1)
+WaterFresnelColor = Color(1, 1, 1, 1)
+WaterMetallic = 0.0
+WaterRoughness = 0.0
+WaterTimeScale = 0.1
+WaterStrength = 0.4
+WaterNoiseScale = 10.0
+WaterHeightScale = 0.15
+WaterColorDeep = Color(1, 1, 1, 1)
+WaterColorShallow = Color(1, 1, 1, 1)
+WaterBeersLaw = 2.0
+WaterDepthOffset = -0.75
+WaterEdgeScale = 0.1
+WaterNear = 0.5
+WaterFar = 100.0
+WaterEdgeColor = Color(1, 1, 1, 1)
+VisualInstanceLayers = 1
+
+[sub_resource type="Resource" id="Resource_7ey6j"]
+script = ExtResource("45_lh8qw")
+ZonePosition = Vector2i(0, 0)
+HeightMapTexture = ExtResource("40_3g8o2")
+SplatmapsTexture = [ExtResource("42_one7b"), ExtResource("43_dcum1")]
+FoliagesTexture = [ExtResource("38_unto0"), ExtResource("39_2txra")]
+ObjectsTexture = [ExtResource("41_5o11h")]
+WaterTexture = ExtResource("44_ytcwy")
+
+[sub_resource type="Resource" id="Resource_5xsav"]
+script = ExtResource("46_332jo")
+Zones = [SubResource("Resource_7ey6j")]
+
+[node name="MainScene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jf11k")
+
+[node name="BocahJawa1" parent="." groups=["player"] instance=ExtResource("1_ekeiw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.5067, 31.8107, 51.9264)
+
+[node name="TerraBrush" type="Node3D" parent="."]
+script = ExtResource("2_mkqqx")
+DataPath = "res://Scenes/MainScene"
+TextureSets = SubResource("Resource_a1dvv")
+Foliages = [SubResource("Resource_iq232"), SubResource("Resource_6765c")]
+DefaultObjectFrequency = 4
+Objects = [SubResource("Resource_xsg1h")]
+WaterDefinition = SubResource("Resource_uli4l")
+TerrainZones = SubResource("Resource_5xsav")
+metadata/_edit_lock_ = false
+
+[node name="KunangSpawner" parent="." instance=ExtResource("47_ly17q")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 3.93137, -36.8101)
+SpawnCount = 2
+
+[node name="KunangSpawner3" parent="." instance=ExtResource("47_ly17q")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 26.8612, 1.27814, -60.9167)
+SpawnCount = 2
+
+[node name="KunangSpawner4" parent="." instance=ExtResource("47_ly17q")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, -44.0506, 3.97238, -22.9105)
+SpawnCount = 2
+
+[node name="KunangSpawner5" parent="." instance=ExtResource("47_ly17q")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, -68.6183, 3.16049, -39.3471)
+SpawnCount = 2
+
+[node name="KunangSpawner6" parent="." instance=ExtResource("47_ly17q")]
+transform = Transform3D(1.48876, 0.0458606, 1.33236, 0.00898916, 0.997272, -0.147351, -1.33548, 0.0578368, 1.48429, -87.3374, 5.81111, 7.52237)
+SpawnCount = 3
+
+[node name="KunangSpawner7" parent="." instance=ExtResource("47_ly17q")]
+transform = Transform3D(1.97834, 0.00637542, 0.293284, 0.00898917, 0.997272, -0.147351, -0.293423, 0.0735367, 1.97288, -69.9932, 6.1315, 40.524)
+SpawnCount = 3
+
+[node name="KunangSpawner8" parent="." instance=ExtResource("47_ly17q")]
+transform = Transform3D(1.97834, 0.00637542, 0.293284, 0.125931, 0.884032, -0.926335, -0.265178, 0.467384, 1.74811, -63.408, -0.475091, 70.7258)
+SpawnCount = 3
+
+[node name="KunangSpawner9" parent="." instance=ExtResource("47_ly17q")]
+transform = Transform3D(0.857601, -0.318885, -1.69049, 0.0866896, 0.941814, -0.666655, 1.80472, 0.106294, 0.835345, -31.78, 1.87023, 66.4687)
+SpawnCount = 3
+
+[node name="KunangSpawner10" parent="." instance=ExtResource("47_ly17q")]
+transform = Transform3D(0.857601, -0.318885, -1.69049, 0.0866896, 0.941814, -0.666655, 1.80472, 0.106294, 0.835345, -9.93247, 12.6907, 37.4303)
+SpawnCount = 4
+
+[node name="KunangSpawner2" parent="." instance=ExtResource("47_ly17q")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 73.3461, 1.78059, -96.0629)
+SpawnCount = 3
+
+[node name="BarongSpawner" parent="." instance=ExtResource("48_kd2s0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 64.7935, 0.077392, -73.5111)
+ShowDebugArea = false
+
+[node name="BarongSpawner2" parent="." instance=ExtResource("48_kd2s0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -17.814, 1.91915, -17.7259)
+ShowDebugArea = false
+
+[node name="Joglo" parent="." instance=ExtResource("49_r5xo4")]
+transform = Transform3D(0.455545, 0, 0.890213, 0, 1, 0, -0.890213, 0, 0.455545, 64.254, 28.491, 61.659)
+
+[node name="BarongSpawner3" parent="." instance=ExtResource("48_kd2s0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -89.7631, 0.346844, -46.5935)
+ShowDebugArea = false
+
+[node name="KunangSpawner11" parent="." instance=ExtResource("47_ly17q")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, -82.7206, -0.780556, -18.443)
+
+[node name="BarongSpawner4" parent="." instance=ExtResource("48_kd2s0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -17.2955, 1.26782, 96.0336)
+ShowDebugArea = false
+
+[node name="VictoryArea" parent="." instance=ExtResource("50_a4pxe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.167, 29.6297, 56.6892)
+
+[node name="BarongSpawner5" parent="." instance=ExtResource("48_kd2s0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 53, 30.2262, 48)
+ShowDebugArea = false

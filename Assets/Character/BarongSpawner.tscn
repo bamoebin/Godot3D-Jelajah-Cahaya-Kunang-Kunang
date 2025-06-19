@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://brn8edjxrhn3a"]
+
+[ext_resource type="Script" path="res://Scripts/barong/BarongSpawner.cs" id="1_b76sy"]
+[ext_resource type="PackedScene" uid="uid://cevq6ldxy276c" path="res://Assets/Character/Barong.tscn" id="2_pe3t4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b78et"]
+
+[node name="BarongSpawner" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.22619, 0)
+script = ExtResource("1_b76sy")
+BarongScene = ExtResource("2_pe3t4")
+SpawnCount = 1
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(5, 0, 0, 0, 1.5, 0, 0, 0, 5, 0, 0.560929, 0)
+shape = SubResource("BoxShape3D_b78et")

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj4dgctsjaqk5"]
+
+[ext_resource type="PackedScene" uid="uid://bym34s8dmcj3g" path="res://Assets/Items/lentera.glb" id="1_iv8wx"]
+[ext_resource type="Script" path="res://Scripts/objects/Lentera.cs" id="2_j0pre"]
+
+[node name="lentera" instance=ExtResource("1_iv8wx")]
+script = ExtResource("2_j0pre")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="world" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0312702, -0.131601, 0.367656)
+light_color = Color(0.823529, 0.839216, 0.54902, 1)
+light_energy = 0.5
+light_size = 1.0
+shadow_enabled = true
+shadow_bias = 0.5
+shadow_blur = 2.0
+distance_fade_enabled = true
+omni_range = 3.19466
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="world" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00907315, 0, -0.224404)
+light_color = Color(0.823529, 0.839216, 0.54902, 1)
+light_energy = 0.5
+light_size = 1.0
+shadow_enabled = true
+shadow_bias = 0.5
+shadow_blur = 2.0
+distance_fade_enabled = true
+omni_range = 0.433704

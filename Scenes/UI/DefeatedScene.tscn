@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=3 uid="uid://dlvkh7v7qbsp1"]
+
+[ext_resource type="Script" path="res://Scripts/ui/DefeatedSceneController.cs" id="1_hecfn"]
+[ext_resource type="Texture2D" uid="uid://q4kd8gha3f5f" path="res://Assets/img/comm.png" id="1_plwhc"]
+[ext_resource type="FontFile" uid="uid://cll4uwy10rxb7" path="res://Assets/fonts/woodgod/woodgodbold.ttf" id="2_0nsff"]
+[ext_resource type="Texture2D" uid="uid://b5rts103cryhp" path="res://Assets/img/button.png" id="3_3e37i"]
+[ext_resource type="Texture2D" uid="uid://dy8r57kkic335" path="res://Assets/img/button_hover.png" id="4_m4udt"]
+[ext_resource type="Texture2D" uid="uid://b2efbtp5ewyv0" path="res://Assets/img/defeat.png" id="5_0nnxl"]
+
+[node name="DefeatedScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hecfn")
+
+[node name="Comm" type="Sprite2D" parent="."]
+position = Vector2(799, 638)
+texture = ExtResource("1_plwhc")
+
+[node name="Defeat" type="Sprite2D" parent="."]
+position = Vector2(1348, 317)
+texture = ExtResource("5_0nnxl")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 275.0
+offset_top = 501.0
+offset_right = 1331.0
+offset_bottom = 604.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_0nsff")
+theme_override_font_sizes/font_size = 100
+text = "Rawrrrr......"
+horizontal_alignment = 1
+
+[node name="BtnRestart" type="TextureButton" parent="Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.849
+anchor_top = 0.519
+anchor_right = 0.849
+anchor_bottom = 0.519
+offset_left = -821.544
+offset_top = 94.543
+offset_right = -501.544
+offset_bottom = 188.543
+grow_horizontal = 2
+texture_normal = ExtResource("3_3e37i")
+texture_pressed = ExtResource("1_plwhc")
+texture_hover = ExtResource("4_m4udt")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Label/BtnRestart"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.0
+offset_top = -32.0
+offset_right = 94.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_0nsff")
+theme_override_font_sizes/font_size = 50
+text = "Play Again"
+horizontal_alignment = 1
+
+[node name="BtnExittoMainMenu" type="TextureButton" parent="Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.849
+anchor_top = 0.519
+anchor_right = 0.849
+anchor_bottom = 0.519
+offset_left = -242.544
+offset_top = 89.543
+offset_right = 77.4559
+offset_bottom = 183.543
+grow_horizontal = 2
+texture_normal = ExtResource("3_3e37i")
+texture_pressed = ExtResource("1_plwhc")
+texture_hover = ExtResource("4_m4udt")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Label/BtnExittoMainMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.0
+offset_top = -32.0
+offset_right = 94.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_0nsff")
+theme_override_font_sizes/font_size = 50
+text = "Main Menu"
+horizontal_alignment = 1

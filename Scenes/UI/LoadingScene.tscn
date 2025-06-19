@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bn40geyalyqn7"]
+
+[ext_resource type="Script" path="res://Scripts/ui/LoadingScene.cs" id="1_75xth"]
+[ext_resource type="Texture2D" uid="uid://babdpxpud3oh1" path="res://Assets/img/background.png" id="1_nnpxq"]
+[ext_resource type="FontFile" uid="uid://cll4uwy10rxb7" path="res://Assets/fonts/woodgod/woodgodbold.ttf" id="2_hea8c"]
+
+[node name="LoadingScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_75xth")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(803, 401)
+scale = Vector2(1.0612, 1)
+texture = ExtResource("1_nnpxq")
+
+[node name="LoadingContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 363.0
+offset_right = 933.0
+offset_bottom = 453.0
+
+[node name="LoadingContent" type="VBoxContainer" parent="LoadingContainer"]
+layout_mode = 2
+
+[node name="LoadingLabel" type="Label" parent="LoadingContainer/LoadingContent"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hea8c")
+theme_override_font_sizes/font_size = 70

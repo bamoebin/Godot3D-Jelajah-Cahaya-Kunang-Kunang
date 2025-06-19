@@ -1,0 +1,161 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddtqefx42750g"]
+
+[ext_resource type="Texture2D" uid="uid://df7ng7wnfa3jc" path="res://Assets/img/ChatGPT Image 18 Jun 2025, 21.18.37.png" id="1_de4gg"]
+[ext_resource type="Script" path="res://Scripts/ui/MainMenuController.cs" id="1_i1knj"]
+[ext_resource type="FontFile" uid="uid://cll4uwy10rxb7" path="res://Assets/fonts/woodgod/woodgodbold.ttf" id="2_i18nr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dbnue"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i1knj")
+
+[node name="ChatGptImage18Jun2025,21_18_37" type="Sprite2D" parent="."]
+position = Vector2(799, 492)
+scale = Vector2(1.05054, 1.01184)
+texture = ExtResource("1_de4gg")
+
+[node name="Panel" type="Panel" parent="."]
+clip_contents = true
+offset_left = -1.0
+offset_top = 3.0
+offset_right = 1620.0
+offset_bottom = 915.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_dbnue")
+
+[node name="BtnPlay" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.849
+anchor_top = 0.519
+anchor_right = 0.849
+anchor_bottom = 0.519
+offset_left = -152.229
+offset_top = -91.3281
+offset_right = 145.771
+offset_bottom = 2.67194
+grow_horizontal = 2
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Panel/BtnPlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.0
+offset_top = -32.0
+offset_right = 94.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_i18nr")
+theme_override_font_sizes/font_size = 60
+text = "Play"
+horizontal_alignment = 1
+
+[node name="BtnGuide" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.849
+anchor_top = 0.519
+anchor_right = 0.849
+anchor_bottom = 0.519
+offset_left = -152.229
+offset_top = 8.67194
+offset_right = 145.771
+offset_bottom = 102.672
+grow_horizontal = 2
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Panel/BtnGuide"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.0
+offset_top = -32.0
+offset_right = 94.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_i18nr")
+theme_override_font_sizes/font_size = 60
+text = "Guide"
+horizontal_alignment = 1
+
+[node name="BtnAbout" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.849
+anchor_top = 0.519
+anchor_right = 0.849
+anchor_bottom = 0.519
+offset_left = -151.229
+offset_top = 117.672
+offset_right = 146.771
+offset_bottom = 211.672
+grow_horizontal = 2
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Panel/BtnAbout"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.0
+offset_top = -32.0
+offset_right = 94.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_i18nr")
+theme_override_font_sizes/font_size = 60
+text = "About"
+horizontal_alignment = 1
+
+[node name="BtnExit" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.847
+anchor_top = 0.829
+anchor_right = 0.847
+anchor_bottom = 0.829
+offset_left = -148.987
+offset_top = -47.048
+offset_right = 149.013
+offset_bottom = 46.952
+grow_horizontal = 2
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Panel/BtnExit"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.0
+offset_top = -32.0
+offset_right = 94.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_i18nr")
+theme_override_font_sizes/font_size = 60
+text = "Exit"
+horizontal_alignment = 1

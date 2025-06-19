@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://ddm06ojdr2js5"]
+
+[ext_resource type="PackedScene" uid="uid://dbp6lnwa6iw45" path="res://Assets/Character/bocahJawa.tscn" id="4_o7lbx"]
+[ext_resource type="PackedScene" uid="uid://fjeirc7fpybj" path="res://Assets/Obj/KunangSpawner.tscn" id="6_tln8u"]
+[ext_resource type="PackedScene" uid="uid://brn8edjxrhn3a" path="res://Assets/Character/BarongSpawner.tscn" id="8_df3it"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ti6f7"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ialtc"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wkhpo"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3bcfh"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sm4rj"]
+sky_top_color = Color(0.0392157, 0.0392157, 0.101961, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_3poag"]
+sky_material = SubResource("ProceduralSkyMaterial_sm4rj")
+
+[sub_resource type="Environment" id="Environment_nsybg"]
+background_mode = 2
+background_color = Color(0.0392157, 0.0392157, 0.101961, 1)
+sky = SubResource("Sky_3poag")
+ambient_light_source = 2
+ambient_light_color = Color(0.101961, 0.101961, 0.227451, 1)
+ambient_light_energy = 0.1
+fog_light_color = Color(0.00296895, 0.00296306, 0.00888569, 1)
+fog_aerial_perspective = 0.5
+fog_sky_affect = 0.7
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.31802, 0.31802, 0.31802, 1)
+volumetric_fog_emission = Color(0.0127817, 0.0127765, 0.0287698, 1)
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03624, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -1.03747, 0)
+mesh = SubResource("PlaneMesh_ti6f7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ialtc")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 20, 0, 0, 0, 1, 0, 8.53878, 2.82333)
+mesh = SubResource("BoxMesh_wkhpo")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_3bcfh")
+
+[node name="KunangSpawner" parent="." instance=ExtResource("6_tln8u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.31626, -0.564624, 0)
+
+[node name="KunangSpawner2" parent="." instance=ExtResource("6_tln8u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.58, -0.564624, 0)
+
+[node name="BarongSpawner" parent="." instance=ExtResource("8_df3it")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.0231047, 0)
+SpawnCount = 5
+
+[node name="BocahJawa1" parent="." instance=ExtResource("4_o7lbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.81946, -0.931182, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nsybg")
