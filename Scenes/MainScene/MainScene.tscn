@@ -1,6 +1,7 @@
-[gd_scene load_steps=76 format=3 uid="uid://gm1rrjc4yf1b"]
+[gd_scene load_steps=83 format=3 uid="uid://gm1rrjc4yf1b"]
 
 [ext_resource type="PackedScene" uid="uid://dbp6lnwa6iw45" path="res://Assets/Character/bocahJawa.tscn" id="1_ekeiw"]
+[ext_resource type="Script" path="res://Scripts/ui/MainScene.cs" id="1_sr26c"]
 [ext_resource type="Script" path="res://addons/terrabrush/TerraBrush.cs" id="2_mkqqx"]
 [ext_resource type="Texture2D" uid="uid://csjbudgioubg2" path="res://Assets/Textures/brown_mud_leaves_01_1k.gltf/textures/brown_mud_leaves_01_diff_1k.jpg" id="3_bhije"]
 [ext_resource type="Texture2D" uid="uid://cxw4b62b85gxv" path="res://Assets/Textures/brown_mud_leaves_01_1k.gltf/textures/brown_mud_leaves_01_nor_gl_1k.jpg" id="4_31213"]
@@ -50,6 +51,12 @@
 [ext_resource type="PackedScene" uid="uid://brn8edjxrhn3a" path="res://Assets/Character/BarongSpawner.tscn" id="48_kd2s0"]
 [ext_resource type="PackedScene" uid="uid://cnpovomjrk61h" path="res://Assets/Obj/rumah/joglo.tscn" id="49_r5xo4"]
 [ext_resource type="PackedScene" uid="uid://b27d84q2t6whu" path="res://Assets/Obj/rumah/VictoryArea.tscn" id="50_a4pxe"]
+[ext_resource type="Script" path="res://Scripts/ui/Hud.cs" id="52_1smua"]
+[ext_resource type="Texture2D" uid="uid://b5rts103cryhp" path="res://Assets/img/button.png" id="53_6qp4x"]
+[ext_resource type="FontFile" uid="uid://y7qy6pfkfg1d" path="res://Assets/fonts/woodgod/woodgod.ttf" id="54_mjj25"]
+[ext_resource type="Texture2D" uid="uid://c0sgt60whpqne" path="res://Assets/img/progres_bar_under.png" id="55_4xkyr"]
+[ext_resource type="Texture2D" uid="uid://1v7c1my56gp2" path="res://Assets/img/progres_bar_main.png" id="56_7x6h4"]
+[ext_resource type="Texture2D" uid="uid://cigi0peh7l4oq" path="res://Assets/img/bar.png" id="57_ge5cd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s8fvk"]
 sky_top_color = Color(0.0392157, 0.0392157, 0.101961, 1)
@@ -282,13 +289,15 @@ WaterTexture = ExtResource("44_ytcwy")
 script = ExtResource("46_332jo")
 Zones = [SubResource("Resource_7ey6j")]
 
-[node name="MainScene" type="Node3D"]
+[node name="MainScene" type="Node3D" node_paths=PackedStringArray("FinishArea")]
+script = ExtResource("1_sr26c")
+FinishArea = NodePath("VictoryArea")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jf11k")
 
 [node name="BocahJawa1" parent="." groups=["player"] instance=ExtResource("1_ekeiw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.5067, 31.8107, 51.9264)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.203689, 19.3056, 36.8766)
 
 [node name="TerraBrush" type="Node3D" parent="."]
 script = ExtResource("2_mkqqx")
@@ -369,3 +378,53 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.167, 29.6297, 56.6892)
 [node name="BarongSpawner5" parent="." instance=ExtResource("48_kd2s0")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 53, 30.2262, 48)
 ShowDebugArea = false
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Hud" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("52_1smua")
+
+[node name="Button" type="Sprite2D" parent="UI/Hud"]
+position = Vector2(192.088, 833)
+scale = Vector2(1.01159, 0.810546)
+texture = ExtResource("53_6qp4x")
+
+[node name="Jarak" type="Label" parent="UI/Hud"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 816.0
+offset_right = 280.0
+offset_bottom = 876.0
+theme_override_fonts/font = ExtResource("54_mjj25")
+theme_override_font_sizes/font_size = 25
+
+[node name="Button2" type="Sprite2D" parent="UI/Hud"]
+position = Vector2(191, 739.906)
+scale = Vector2(1.00606, 0.810546)
+texture = ExtResource("53_6qp4x")
+
+[node name="jumlahkunang" type="Label" parent="UI/Hud"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 716.0
+offset_right = 277.0
+offset_bottom = 776.0
+theme_override_fonts/font = ExtResource("54_mjj25")
+theme_override_font_sizes/font_size = 20
+
+[node name="Node2D" type="Node2D" parent="UI/Hud"]
+position = Vector2(339, 190)
+scale = Vector2(0.2, 0.2)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="UI/Hud/Node2D"]
+offset_left = -1695.0
+offset_top = 1590.0
+offset_right = -169.0
+offset_bottom = 2614.0
+value = 20.0
+texture_under = ExtResource("55_4xkyr")
+texture_over = ExtResource("56_7x6h4")
+texture_progress = ExtResource("57_ge5cd")
+texture_progress_offset = Vector2(580, 430)

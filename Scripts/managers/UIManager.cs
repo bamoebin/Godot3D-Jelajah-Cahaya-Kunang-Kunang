@@ -13,6 +13,8 @@ public partial class UIManager : Node
     private const string DEFEATED_SCENE = "res://Scenes/UI/DefeatedScene.tscn";
     private const string GUIDE_SCENE = "res://Scenes/UI/GuideScene.tscn";
     private const string ABOUT_SCENE = "res://Scenes/UI/AboutScene.tscn";
+    private const string HUD_SCENE = "res://Scenes/UI/Hud.tscn";
+    
 
     // Cached packed scenes
     private PackedScene _pauseMenuScene;
@@ -24,6 +26,9 @@ public partial class UIManager : Node
     // UI layers
     private CanvasLayer _hudLayer;
     private CanvasLayer _overlayLayer;
+
+    private PackedScene _hudScene;
+    private Control _gameplayHUD;
 
     // Current states
     private Control _currentOverlay;
@@ -133,11 +138,50 @@ public partial class UIManager : Node
 
             }
 
+            // TAMBAHAN: Cache HUD scene
+            if (ResourceLoader.Exists(HUD_SCENE))
+            {
+                _hudScene = GD.Load<PackedScene>(HUD_SCENE);
+                GD.Print($"✅ HUD scene cached: {HUD_SCENE}");
+            }
+            else
+            {
+                GD.PrintErr($"❌ HUD scene not found: {HUD_SCENE}");
+            }
+
             GD.Print("✅ UI scenes caching complete");
         }
         catch (System.Exception e)
         {
             GD.PrintErr($"❌ Failed to cache UI scenes: {e.Message}");
+        }
+    }
+
+    public void ShowGameplayHUD()
+    {
+        if (_hudScene == null)
+        {
+            GD.PrintErr("❌ HUD scene not loaded!");
+            return;
+        }
+        
+        // Remove existing HUD jika ada
+        HideGameplayHUD();
+        
+        // Instantiate HUD
+        _gameplayHUD = _hudScene.Instantiate<Control>();
+        _hudLayer.AddChild(_gameplayHUD);
+        
+        GD.Print("✅ Gameplay HUD displayed");
+    }
+
+    public void HideGameplayHUD()
+    {
+        if (_gameplayHUD != null)
+        {
+            _gameplayHUD.QueueFree();
+            _gameplayHUD = null;
+            GD.Print("🚫 Gameplay HUD hidden");
         }
     }
 
@@ -219,6 +263,19 @@ public partial class UIManager : Node
             {
                 GetTree().ChangeSceneToFile(scenePath);
                 EmitSignal(SignalName.SceneChanged, scenePath);
+                
+                // TAMBAHAN: Auto-show HUD untuk MainScene
+                if (scenePath.Contains("MainScene"))
+                {
+                    // Delay untuk memastikan scene fully loaded
+                    GetTree().CreateTimer(0.5f).Timeout += ShowGameplayHUD;
+                }
+                else
+                {
+                    // Hide HUD untuk scene lain
+                    HideGameplayHUD();
+                }
+                
                 GD.Print($"✅ Scene changed to: {scenePath}");
             }
             else

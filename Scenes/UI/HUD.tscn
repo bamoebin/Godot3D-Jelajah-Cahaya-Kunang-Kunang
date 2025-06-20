@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://ddf2fjlh0rpxb"]
+
+[ext_resource type="Script" path="res://Scripts/ui/Hud.cs" id="1_v1swa"]
+[ext_resource type="Texture2D" uid="uid://b5rts103cryhp" path="res://Assets/img/button.png" id="2_rab8x"]
+[ext_resource type="FontFile" uid="uid://y7qy6pfkfg1d" path="res://Assets/fonts/woodgod/woodgod.ttf" id="3_euxsl"]
+[ext_resource type="Texture2D" uid="uid://c0sgt60whpqne" path="res://Assets/img/progres_bar_under.png" id="4_wbx45"]
+[ext_resource type="Texture2D" uid="uid://1v7c1my56gp2" path="res://Assets/img/progres_bar_main.png" id="5_o6gx4"]
+[ext_resource type="Texture2D" uid="uid://cigi0peh7l4oq" path="res://Assets/img/bar.png" id="6_7vjkd"]
+
+[node name="Hud" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_v1swa")
+
+[node name="Button" type="Sprite2D" parent="."]
+position = Vector2(185.588, 833)
+scale = Vector2(0.972196, 0.810546)
+texture = ExtResource("2_rab8x")
+
+[node name="Jarak" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 805.0
+offset_right = 249.0
+offset_bottom = 865.0
+theme_override_fonts/font = ExtResource("3_euxsl")
+
+[node name="Button2" type="Sprite2D" parent="."]
+position = Vector2(184.5, 739.906)
+scale = Vector2(0.966667, 0.810546)
+texture = ExtResource("2_rab8x")
+
+[node name="jumlahKunang" type="Label" parent="."]
+offset_left = 63.8246
+offset_top = 711.906
+offset_right = 248.825
+offset_bottom = 771.906
+theme_override_fonts/font = ExtResource("3_euxsl")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(339, 190)
+scale = Vector2(0.2, 0.2)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Node2D"]
+offset_left = -1695.0
+offset_top = 1590.0
+offset_right = -169.0
+offset_bottom = 2614.0
+value = 20.0
+texture_under = ExtResource("4_wbx45")
+texture_over = ExtResource("5_o6gx4")
+texture_progress = ExtResource("6_7vjkd")
+texture_progress_offset = Vector2(580, 430)

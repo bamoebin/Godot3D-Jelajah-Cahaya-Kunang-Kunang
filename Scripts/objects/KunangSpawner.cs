@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public partial class KunangSpawner : Node3D
 {
@@ -27,6 +28,7 @@ public partial class KunangSpawner : Node3D
 
 	public override void _Ready()
 	{
+		AddToGroup("kunang_spawners");
 
 		if (UseOptimization)
 		{
@@ -39,6 +41,19 @@ public partial class KunangSpawner : Node3D
 			SpawnKunangKunang();
 		}
 	}
+
+	// Method untuk HUD tracking
+	// Method untuk HUD tracking (pastikan ada)
+public int GetActiveKunangCount()
+{
+	return UseOptimization ? _activeKunang.Count : 
+		   GetChildren().Cast<Node>().OfType<KunangKunang>().Count();
+}
+
+public int GetTotalKunangCount()
+{
+	return UseOptimization ? (_activeKunang.Count + _kunangPool.Count) : SpawnCount;
+}
 
 	// TAMBAHAN: Method untuk setup optimized spawning
 	private void SetupOptimizedSpawning()
@@ -237,6 +252,6 @@ public partial class KunangSpawner : Node3D
 
 
 
-	
-	
+
+
 }

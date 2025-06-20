@@ -38,6 +38,8 @@ enabled=PackedStringArray("res://addons/terrabrush/plugin.cfg")
 
 ui_manager=""
 player=""
+kunang_spawners=""
+finish_area=""
 
 [input]
 
